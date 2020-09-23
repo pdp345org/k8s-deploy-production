@@ -16,10 +16,14 @@ spec:
         host: carts.production.svc.cluster.local
   - route:
     - destination:
+        port:
+         number: 8080
         host: front-end.production.svc.cluster.local
-        subset: v1
+#        subset: v1
       weight: 50 #v1
     - destination:
+        port:
+         number: 8080
         host: front-end.production.svc.cluster.local
-        subset: v2
+#        subset: v2
       weight: 50 #v2
