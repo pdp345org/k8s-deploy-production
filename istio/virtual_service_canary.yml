@@ -19,8 +19,13 @@ spec:
     - destination:
         host: front-end.production.svc.cluster.local
         subset: v1
-      weight: 50 #v1
+      weight: 30 #v1
     - destination:
         host: front-end.production.svc.cluster.local
         subset: v2
-      weight: 50 #v2
+      weight: 30 #v2
+    - destination:
+        host: front-end.production.svc.cluster.local
+        subset: v3
+      weight: 40 #v3
+
