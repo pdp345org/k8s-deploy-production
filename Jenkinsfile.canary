@@ -47,7 +47,7 @@ pipeline {
         container('kubectl') {
           sh "cat istio/virtual_service_canary.yml"
           sh "kubectl apply -f istio/virtual_service_canary.yml"
-          sh "kubectl describe virtualservices sockshop"
+          sh "kubectl describe virtualservices sockshop -n production"
         }
       }
     }
